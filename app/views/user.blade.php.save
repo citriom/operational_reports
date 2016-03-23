@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title> OpenProject Reports </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css">
+    <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css"">
+    <style>
+	h2{ margin:0 }
+	.jumbotron h3{ margin:0 }
+	.labels{ margin-top:10px }
+	.label.label-info { margin-right:5px }
+    </style>
+</head>
+<body>
+    <div class="container">
+	<div class="col-sm-12">
+            <div class="row">
+	    	<div class="jumbotron text-left">
+  		    <h3>{{ $user->firstname }} {{ $user->lastname }}</h3>
+  		    <small> {{ $user->login }}
+		    <div class="labels">
+		    @if ( $user->admin )
+			<span class="label label-success">Admin</span>
+	            @endif
+		    </div>
+		    <div class="labels">
+			<span class="label label-info"> All projects </span>
+		    @foreach( $user->projects as $project )
+			<span class="label label-info"> {{ $project->name }} </span>
+		    @endforeach
+		    </div>
+		    </small>
+	    	</div>
+	    </div>
+
+	    <div class="row">	    
+		<h4> Time Entries </h4>
+	        <table class="table table-condensed table-bordered table-hover">
+		    <thead>
+		        <tr>
+			    <th width="15%"> Project </th>
+			    <th width="15%"> Work Package </th>
+			    <th width="55%"> Comments </th>
+			    <th width="15%" class="text-right"> Hours </th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		    	@foreach( $user->timeEntries as $time )
+		    	<tr>
+			    <td> {{ Project::where(id, $$time->id }} </td>
+			    <td> {{ $time->work_package_id }} </td>
+			    <td> {{ $time->comments }} </td>
+			    <td class="text-right"> {{ $time->hours }} </td>
+		    	</tr>
+		    	@endforeach
+		    <tbody>
+	    	</table>
+            </div>
+	</div>
+
+        <footer class="footer">
+            <p>&copy; Citriom, {{ date("Y") }}</p>
+        </footer>
+
+    </div>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

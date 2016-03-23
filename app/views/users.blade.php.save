@@ -1,0 +1,26 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css">
+    <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css"">
+</head>
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <h3 class="text-muted">OpenProject Reports</h3>
+        </div>
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>Users</h4>
+		<ul>
+                    <li><a href="users.php">Users List</a></li>
+		</ul>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; Citriom, {{ date("Y") }}</p>
+        </footer>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
