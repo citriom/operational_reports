@@ -58,15 +58,20 @@ class AuthController extends BaseController {
         {
             return $e->getMessage();
         }
-	$user = User::where('email', $profile->email)->first();
-	if( $user!=NULL )
-	    return Redirect::to('/');
-	else{
-	    $oauth->logoutAllProviders();
-	    Session::flash('error_message', 'Error: This user has no Privileges');
-	    return View::make('xlogin');
-	}
-
+        $user = User::where('email', $profile->email)->first();
+        if( $user!=NULL ){
+            $data = [
+                'username' => $user->username,
+                'password' => $user->password
+            ];
+            Session::put('user', $data);
+            return Redirect::intended('/');
+        }
+    	else{
+    	    $oauth->logoutAllProviders();
+    	    Session::flash('error_message', 'Error: This user has no Privileges');
+    	    return View::make('xlogin');
+    	}
     }
 
 
