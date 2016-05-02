@@ -18,7 +18,7 @@ class UserTableSeeder extends Seeder {
             'last_name'  => 'Escalante',
             'username'   => 'pedro.escalante@citriom.com',
             'email'      => 'pedro.escalante@citriom.com',
-            'password'   =>  Hash::make('xavier1910')
+            'password'   =>  Hash::make('secret')
         ]);
     }
 
