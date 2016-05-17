@@ -12,7 +12,7 @@
 		<link href="css/font-awesome.min.css" 	rel="stylesheet">		
 		<link href="css/style.css" 				rel="stylesheet">
 		<link href="css/widgets.css" 			rel="stylesheet">   
-		<link id="bsdp-css" href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+		<link id="bsdp-css" href="css/bootstrap-dp.css" rel="stylesheet">
 
 		<link rel="shortcut icon" 	href="favicon.ico">
 		<style>
@@ -153,13 +153,12 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group">
-                        <div class="input-daterange input-group" id="datepicker" style="margin-top:10px">
-                            <input type="text" class="input-sm form-control" name="start" required/>
-                            <span class="input-group-addon">to</span>
-                            <input type="text" class="input-sm form-control" name="end" required />
-                        </div>
-                    </div>
+                    
+                    <div class="input-daterange input-group" id="datepicker">
+					    <input type="text" class="input-sm form-control" name="start" />
+					    <span class="input-group-addon">to</span>
+					    <input type="text" class="input-sm form-control" name="end" />
+					</div>
                     <button class="btn btn-success btn-sm"> Generate Report </button>
                 {{ Form::close() }}										
 									  	</div>
@@ -257,11 +256,11 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script> 
 
+		<script src="js/bootstrap-dp.js"></script>
 		<script src="js/jquery.gritter.min.js"></script>
 		<script src="js/respond.min.js"></script>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/custom.js"></script>
-		<script src="js/bootstrap-datetimepicker.min.js"></script>
 		<script src="js/bootstrap-multiselect.js"></script>
 		<script type="text/javascript">
 
