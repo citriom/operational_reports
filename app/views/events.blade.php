@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css">
     <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css"">
     <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css">-->
-    <link id="bsdp-css" href="http://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet">
+    <link id="bsdp-css" href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <style>
         body { padding-top: 0 }
         .input-group-addon{ color:#2B3E50 }
@@ -93,7 +93,7 @@
     </div>    
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="http://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script>
         $(document).ready( function() {
         $('.input-daterange').datepicker({

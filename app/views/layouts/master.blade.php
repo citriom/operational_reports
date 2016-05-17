@@ -9,7 +9,7 @@
 		<link href="css/font-awesome.min.css" 	rel="stylesheet">		
 		<link href="css/style.css" 				rel="stylesheet">
 		<link href="css/widgets.css" 			rel="stylesheet">   
-		<link id="bsdp-css" href="http://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet">
+		<link id="bsdp-css" href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 		<link rel="shortcut icon" 	href="favicon.ico">
 		<style>
 	        .multiselect-container.dropdown-menu { width:100%; }
@@ -90,7 +90,7 @@
 		<script src="js/respond.min.js"></script>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/custom.js"></script>
-		<script src="http://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="js/bootstrap-datetimepicker.min.js"></script>
 		<script src="js/bootstrap-multiselect.js"></script>
 		<script type="text/javascript">
 		$(function () {
