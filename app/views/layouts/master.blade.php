@@ -94,10 +94,7 @@
 		<script src="js/bootstrap-multiselect.js"></script>
 		<script type="text/javascript">
 		$(function () {
-	    	$('.input-daterange').datepicker({
-                autoclose: true,
-                todayHighlight: true
-            });
+	    	$('.input-daterange').datepicker();
 
             $('#user_id').multiselect({
                 maxHeight:200,
