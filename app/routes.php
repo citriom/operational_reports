@@ -736,6 +736,9 @@ Route::get('/file', function()
     Route::post('/hoursuser', function()
     {
 	$users = $_POST['users'];
+	session_start();
+	$_SESSION['users']=$_POST['users'];
+
 	if( isset($_POST['projects']) )
 	    $projects = $_POST['projects'];
 	else

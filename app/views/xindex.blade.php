@@ -64,7 +64,7 @@
 					<div class="sidebar-widget">
 					</div>
 					<ul class="navi">
-						<li class="nblue"><a href="/xindex">
+						<li class="nblue"><a href="/">
 							<i class="fa fa-desktop"></i> Dashboard </a>
 						</li>
 						<li class="nblue"><a href="xusers">
@@ -104,10 +104,17 @@
                     <div class="form-group">
                         <select id="user_id" class="form-control input-sm" multiple="multiple" required>
                             <!--<option value="" selected disabled>Select a User...</option>-->
+<?php
+	session_start();
+	if(!isset($_SESSION['users'])) $_SESSION['users'] = [];
+?>
                             @foreach( $users as $user)
-                            <option value="{{ $user->id }}"> {{ $user->firstname}} {{ $user->lastname }}</option>
+                            <option value="{{ $user->id }}" <?php if( in_array($user->id, $_SESSION['users'])) echo "selected";?>> {{ $user->firstname}} {{ $user->lastname }}</option>
                             @endforeach
                         </select>
+<?php
+	$_SESSION['users']=[];
+?>
                     </div>
                     <div class="form-group">
                         <select id="project_id"  class="form-control input-sm" multiple="multiple">
@@ -273,6 +280,7 @@
             });
 
             $('#user_id').multiselect({
+		includeSelectAllOption: true,
                 maxHeight:200,
                 checkboxName: 'users[]',
                 buttonClass: 'btn btn-success btn-sm',
