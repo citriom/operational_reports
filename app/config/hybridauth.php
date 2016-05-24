@@ -5,8 +5,8 @@ return array(
 	"Google"     => array (
 	    "enabled"    => true,
 	    "keys"       => array ( 
-		"id" => "663940279934-g1sdcvh5hdmc8fh0g5selvn4vr1fktbn.apps.googleusercontent.com", 
-		"secret" => "03DgqjJ45XE6Tibvo9w5KNww" 
+		"id" => "218871663498-cp8ksbub17ib56ld73ingambscdbdcd6.apps.googleusercontent.com", 
+		"secret" => "d1g8AJNmQEFMVicwatys07J4" 
 	    ),
 	)
     ),

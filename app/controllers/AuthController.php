@@ -65,7 +65,7 @@ class AuthController extends BaseController {
                 'username' => $user->username,
                 'password' => $user->password
             ];
-	    if (Auth::loginUsingId($user->username)) // Remember me?
+	    if (Auth::loginUsingId($user->id))
 	    {
                 Session::put('user', $data);
            	return Redirect::intended('/');
