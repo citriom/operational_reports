@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    "base_url" => "http://canopus.citriom.com/frontend/public/gauth/auth"
+    "base_url" => "http://canopus.citriom.com/frontend/public/gauth/auth",
     "providers" => array (
         "Google" => array (
             "enabled" => true,
